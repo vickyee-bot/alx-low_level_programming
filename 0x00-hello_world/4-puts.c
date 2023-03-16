@@ -1,8 +1,11 @@
 #include<stdio.h>
-int main()
+/**
+ * main- this is a description
+ */
+int main(void)
 {
-char MyStr[] = "Programming is like building a multilingual puzzle";
+char MyStr[] = "\"Programming is like building a multilingual puzzle";
 
 puts(MyStr);
-return 0;
+return (0);
 }
