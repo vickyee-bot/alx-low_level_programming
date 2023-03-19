@@ -6,14 +6,11 @@
 int main(void)
 {
 	char ch = 'a';
-	
+
 	while (ch <= 'z')
 	{
-	if (ch == 'q' || 'e')
-	{
-	continue;
-	ch++;
-	}
+	if (ch == 'q' || ch == 'e')
+		continue;
 	putchar(ch);
 	ch++;
 	}
