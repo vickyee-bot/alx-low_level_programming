@@ -3,15 +3,15 @@
 * main - main function
 * Return: 0
 */
-int main()
+int main(void)
 {
 	char ch;
 	ch = 'a';
-	while(ch <= 'z')
+	while (ch <= 'z')
 	{
 	putchar(ch);
 	ch++;
 	}
 	putchar('\n');
-	return 0;
+	return (0);
 }
