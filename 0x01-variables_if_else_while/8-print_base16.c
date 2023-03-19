@@ -9,14 +9,14 @@ int main(void)
 
 	while (digit <= '9')
        	{
-	putchar(digit);
-	digit++;
+		putchar(digit);
+		digit++;
 	}
 	digit = 'a';
 	while (digit <= 'f')
-       	{
-	putchar(digit);
-	digit++;
+	{
+		putchar(digit);
+		digit++;
 	}
 	putchar('\n');
 	return (0);
