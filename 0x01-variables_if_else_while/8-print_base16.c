@@ -3,14 +3,18 @@
 * main - main function
 * Return: 0
 */
-int main(void) {
+int main(void)
+{
 	char digit = '0';
-	while (digit <= '9') {
+
+	while (digit <= '9')
+       	{
 	putchar(digit);
 	digit++;
 	}
 	digit = 'a';
-	while (digit <= 'f') {
+	while (digit <= 'f')
+       	{
 	putchar(digit);
 	digit++;
 	}
