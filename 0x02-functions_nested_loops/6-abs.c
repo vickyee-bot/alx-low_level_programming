@@ -3,14 +3,11 @@
 * _abs - computes the absolute value of an integer
 * Return: absolute value
 */
-int _abs(int)
+int _abs(int num)
 {
-	if (int < 0)
+	if (num < 0)
 	{
-	return (-int);
-	}	
-	else
-	{
-	return (int);
+	return (-num);
 	}
+	return (num);
 }
