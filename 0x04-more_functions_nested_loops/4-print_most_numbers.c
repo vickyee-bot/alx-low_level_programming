@@ -8,11 +8,12 @@ void print_most_numbers(void)
 {
 	char i;
 
-	while (i <= '9')
+	while (i = '0';i <= '9'; i++)
 	{
-		if (
-		putchar(i + '0');
-		i++;
+		if (i == 2 && i ==4)
+		{
+			_putchar(i);
+		}
 	}
-	putchar('\n');
+	_putchar('\n');
 }
