@@ -11,14 +11,14 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	char *start = dest;
 
-	if (dest == '\0')
-		return ('\0');
-	while (*src != '\0' && n--)
+	if (dest == NULL)
+		return (NULL);
+	while (*src && n--)
 	{
 		*dest = *src;
 		dest++;
 		src++;
 	}
 	*dest = '\0';
-	return start;
+	return (start);
 }
