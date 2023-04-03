@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * leet - encode string to 1337
  * @s: string to encode
@@ -7,8 +8,8 @@
 char *leet(char *s)
 {
 	char *r = s;
-	char a[] = { 'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
-	char n[] = { 4, 4, 3, 3, 0, 0, 7, 7, 1, 1 };
+	char a[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	char n[] = {4, 4, 3, 3, 0, 0, 7, 7, 1, 1};
 	int i = 0;
 
 	while (*s)
