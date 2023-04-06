@@ -1,6 +1,17 @@
 #include "main.h"
 #include <stdio.h>
 /**
+ * sqrt_helper - returns the square root of a number
+ * @n: the number
+ * @low: the lower bound
+ * @high: the upper bound
+ *
+ * Return: the square root of n or -1 if n has no square root
+ */
+int sqrt_helper(int n, int low, int high);
+
+
+/**
  * _sqrt_recursion - returns the square root of a number
  * @n: the number
  *
