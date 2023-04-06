@@ -8,12 +8,23 @@
  */
 int _sqrt_recursion(int n)
 {
-	double i = n / 2;
-	double j = 1 / 100000;
+	if (n < 0)
+		return (-1);
+	if (n == 0 || n == 1)
+		return (n);
+	return sqrt_helper(n, 0, n);
+}
+int sqrt_helper(int n, int low, int high)
+{
+	if (low > high)
+		return (-1);
+	int mid = (low + high) / 2;
+	int sqr = mid * mid;
 
-	while ((i * i - n) > j)
-	{
-		i = (i + n / i)/ 2.0;
-	}
-	return (i);
+	if (sqr == n)
+		return (mid);
+	else if (sqr < n)
+		return (sqrt_helper(n, mid + 1, high));
+	else
+		return (sqrt_helper(n, low, mid - 1));
 }
