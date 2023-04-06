@@ -8,13 +8,12 @@
  */
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
+	double i = n / 2;
+	double j = 1 / 100000;
+
+	while ((i * i - n) > j)
 	{
-		return (-1);
+		i = (i + n / i)/ 2.0;
 	}
-	if (n == 0 || n == 1)
-	{
-		return (n);
-	}
-	return (_sqrt_recursion(n, 1, n));
+	return (i);
 }
