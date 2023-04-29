@@ -3,12 +3,7 @@
 #include <stdio.h>
 /**
  * print_all - prints anything
- * @format: list of types of arguments passed to the function
- * c: char
- * i: integer
- * f: float
- * s: char * (if the string is NULL, print (nil) instead
- * any other char should be ignored
+ * @format: list of types of arguments passed
  *
  * Return: void
  */
