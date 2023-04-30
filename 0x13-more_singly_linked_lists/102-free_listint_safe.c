@@ -3,33 +3,32 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * free_listint_safe - Frees a listint_t linked list.
- * @h: Pointer to a pointer to the first node of the list.
+ * free_listint_safe - Frees a listint_t list safely
+ * @h: A pointer to the head node of the list
  *
- * Return: The size of the list that was free'd
+ * Return: The size of the list that was freed
  */
 size_t free_listint_safe(listint_t **h)
 {
 	size_t count = 0;
-	listint_t *temp;
+	listint_t *current, *next;
 
 	if (h == NULL || *h == NULL)
-		return (count);
+		return (0);
 
-	while (*h != NULL)
+	current = *h;
+	*h = NULL;
+	while (current != NULL)
 	{
-		if (*h <= (*h)->next)
-		{
-			temp = *h;
-			*h = NULL;
-		}
-		else
-		{
-			temp = (*h)->next;
-			(*h)->next = NULL;
-		}
-		free(temp);
+		next = current->next;
+		free(current);
 		count++;
+		if (next >= current)
+		{
+			printf("-> [%p] %d\n", (void *)current, current->n);
+			break;
+		}
+		current = next;
 	}
 	return (count);
 }
