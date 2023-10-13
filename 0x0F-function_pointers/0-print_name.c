@@ -7,7 +7,7 @@
  * @f: function pointer
  * @char: character pointer
  *
- * Return: always void
+ * Return: a name if NULL
  */
 void print_name(char *name, void (*f)(char *))
 {
