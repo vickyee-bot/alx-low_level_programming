@@ -1,5 +1,4 @@
 #include <stdarg.h>
-#include <stdlib.h>
 #include <stdio.h>
 
 /**
@@ -10,42 +9,38 @@
  */
 void print_all(const char * const format, ...)
 {
-	char c;
-	int i;
-	float f;
-	char *s;
-	int arg_index = 0;
-
 	va_list args;
+	const char *ptr = format;
+	char c;
+
 	va_start(args, format);
 
-	while ((c = format[arg_index]) != '\0')
+	while ((c = *ptr) != '\0')
 	{
 		if (c == 'c')
 		{
-			i = va_arg(args, int);
-			printf("%c", i);
+			printf("%c", va_arg(args, int));
 		}
 		else if (c == 'i')
 		{
-			f = va_arg(args, double);
-			printf("%f", f);
+			printf("%d", va_arg(args, int));
+		}
+		else if (c == 'f')
+		{
+			printf("%f", (float)va_arg(args, double));
 		}
 		else if (c == 's')
 		{
-			s = va_arg(args, char *);
-			if (s == NULL)
+			char *str = va_arg(args, char *);
+			if (str == NULL)
 				printf("(nil)");
 			else
-				printf("%s", s);
+				printf("%s", str);
 		}
-
-		arg_index++;
-
-		if (format[arg_index] != '\0')
+		if (*(ptr + 1) != '\0')
 			printf(", ");
+		ptr++;
 	}
-
 	printf("\n");
 	va_end(args);
 }
