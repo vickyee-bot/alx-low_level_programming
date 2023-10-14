@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * main - prints the minimum number of coins to make change 
+ * main - prints the minimum number of coins to make change
  * @argc: count
  * @argv: vector
  *
