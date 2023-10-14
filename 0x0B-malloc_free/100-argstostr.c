@@ -18,6 +18,7 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 	{
 		char *arg = av[i];
+
 		while (*arg != '\0')
 		{
 			total_length++;
@@ -32,6 +33,7 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 	{
 		char *arg = av[i];
+
 		while (*arg != '\0')
 		{
 			concat_str[index] = *arg;
